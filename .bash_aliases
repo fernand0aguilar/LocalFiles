@@ -10,6 +10,10 @@ alias htop='sudo htop'
 alias commit='git commit -ps'
 alias q='exit'
 
+
+#original aliases
+alias open='gnome-open'                                                                                                                     
+
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
@@ -18,16 +22,13 @@ alias ps='ps auxf'
 
 
 # Change directory aliases
-alias home='cd ~'
-alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias bd='cd "$OLDPWD"'
-alias rmd='/bin/rm  --recursive --force --verbose '
+alias cdmds='cd UNB/MDS/working_directory/2016.2-Time07-SME_UnB/2016.2-SME_UnB/SME_UnB && ls'
+
 alias la='ls -Alh' # show hidden files
-alias ls='. ~/.bash-wakatime.sh;ls -Fh --color=always ' # add colors and file type extensions
 alias lx='ls -lXBh' # sort by extension
 alias lk='ls -lSrh' # sort by size
 alias lc='ls -lcrh' # sort by change time
@@ -40,13 +41,15 @@ alias ll='ls -Fls' # long listing format
 alias labc='ls -lap' #alphabetical sort
 alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
+
 # alias chmod commands
-alias mx='chmod a+x'
-alias 000='chmod -R 000'
-alias 644='chmod -R 644'
-alias 666='chmod -R 666'
-alias 755='chmod -R 755'
-alias 777='chmod -R 777'
+#alias mx='chmod a+x'
+#alias 000='chmod -R 000'
+#alias 644='chmod -R 644'
+#alias 666='chmod -R 666'
+#alias 755='chmod -R 755'
+#alias 777='chmod -R 777'
+
 alias for5='for i in {0..5}; do'
 alias for10='for i in {0..10}; do'
 alias h="history | grep "
@@ -54,9 +57,8 @@ alias p="ps aux | grep "
 alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 alias f="find . | grep "
 alias countfiles="for t in files links directories; do echo \`find . -type \${t:0:1} | wc -l\` \$t; done 2> /dev/null"
-# To see if a command is aliased, a file, or a built-in command
-alias checkcommand="type -t"
-alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | sort | uniq -c | sort -n | sed -e 's/^ *//' -e 's/ *\$//'"
+
+
 alias openports='netstat -nape --inet'
 alias rebootsafe='sudo shutdown -r now'
 alias rebootforce='sudo shutdown -r -n now'
@@ -66,12 +68,16 @@ alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -
 alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 alias mountedinfo='df -hT'
+
+#To compress and uncompress
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
 alias mkgz='tar -cvzf'
 alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
+
+
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias sha1='openssl sha1'
 alias whatismyip="whatsmyip"
@@ -91,5 +97,3 @@ alias mem="free -m | awk 'NR==2{printf \"MEM: %.2f%%\n\", \$3*100/\$2}'"
 alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END {print usage}' | awk '{printf(\"%.1f\n\", \$1)}'"
 alias run='python3 manage.py runserver'
 alias manage='python3 manage.py'
-alias l='ls'
-alias c='cd'
