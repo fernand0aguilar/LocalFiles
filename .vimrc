@@ -15,7 +15,7 @@ set smartindent
 syntax on
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%100v.\+/
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -53,7 +53,7 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:gitgutter_max_signs = 10000
 
 "Disable autoindentation"
-"set noai
+set noai
 
 " Enable filetype plugins "
 filetype plugin on
@@ -91,9 +91,6 @@ set cursorline
 autocmd VimEnter * if exists(":Lexplore") | exe "map <C-n> :Lexplore <CR>" | else | exe "map <C-n> :Vexplore <CR>" | endif
 
 map <F9> :NERDTreeToggle <cr>
-
-
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_liststyle=3
