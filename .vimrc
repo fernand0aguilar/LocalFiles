@@ -1,104 +1,71 @@
-" Load Pathogen
-execute pathogen#infect()
 
-" Use Vim settings, rather then Vi settings (much better!).
+
+"== General Config ==
 set nocompatible
-
-" Default configuration in case there's no other definition in ftplugin
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set smarttab
-set autoindent
-set smartindent
 syntax on
+set backspace=indent,eol,start          "Allow backspace in insert mode
+set history=1000                        "Store a lot of cmds in history
+set gcr=a:blinkon0                      "Disable cursor blink
+set number                              "Display Line Numbers
+set showmode                            "Show current mode down bottom
+set autoread                            "Reload files changed outside vim
+set hidden
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-set number
-
-set noswapfile
-
-set wildignore=*.o,*~,*.pyc,*.swp
-
-" Paste behaviour
-set paste
-
-"color scheme"
-" colorscheme elflord
-" colorscheme delek
-" colorscheme desert
- colorscheme PaperColor
-"colorscheme default
-
-" Set background type
-set background=dark
-
-" status line
-" set statusline=%(%F%m%r%h%w\ [%Y]\ %{&encoding}\ %)%=%(%l,%v\ %LL\ %p%%%)
-set laststatus=2
-set linespace=0
-" let g:airline_theme = 'badwolf'"let g:airline_theme = 'wombat'
-let g:airline_theme = 'wombat'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-
-" Keep git sign column as default (+, -, ~, etc.)
-" let g:gitgutter_override_sign_column_highlight = 0
-" let g:gitgutter_max_signs = 10000
-
-"Disable autoindentation"
-"set noai
-
-" Enable filetype plugins "
-filetype plugin on
-
-" Disable preview code when using omni complete"
-set completeopt=menu
-
-" Allow modelines
-set modelines=1
-
-" set spelllang=en,pt_br
-
-" vim markdown settings
-let g:vim_markdown_folding_disabled=1
-
-" force vim to use 265 colors
-if match($XDG_CURRENT_DESKTOP, "KDE") != -1
-  set term=konsole-256color
-elseif match($XDG_CURRENT_DESKTOP, "GNOME") != -1
-  set term=gnome-256color
-elseif match($XDG_CURRENT_DESKTOP, "XFCE") != -1
-  set term=xfce
-else
-  set term=xterm-256color
+" ================ Persistent Undo =============================
+" " Keep undo history across sessions, by storing in file.
+if has('persistent_undo')
+   silent !mkdir ~/.vim/backups > /dev/null 2>&1
+   set undodir=~/.vim/backups
+   set undofile
 endif
 
-" Set column and line highlight
-" set cursorcolumn
-set cursorline
-" hi CursorLine term=bold ctermfg=Yellow gui=bold guifg=Yellow
-" hi CursorLineNr term=bold ctermfg=Yellow gui=bold guifg=Yellow
 
-""------------ Mappings --------------"
-"" Create tree navigation
-autocmd VimEnter * if exists(":Lexplore") | exe "map <C-n> :Lexplore <CR>" | else | exe "map <C-n> :Vexplore <CR>" | endif
+" =============== Vundle Plugins Config =========================
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	" +HELP+ Vundle Plugin Loader -> quick HELP:
+ 	" :PluginList       - lists configured plugins
+	" :PluginInstall    - installs plugins; append `!` to update or just
+	" :PluginUpdate
+	" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+	" :PluginClean      - confirms removal of unused plugins; append `!` to
+	" auto-approve removal	
+	"_
+" ------------------Install plugins below------------------------
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'scrooloose/nerdtree'
+        Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+        Plugin 'ryanoasis/vim-devicons'
+        Plugin 'Xuyuanp/nerdtree-git-plugin'
+" ---------------------------------------------------------------
+call vundle#end()
 
-map <F9> :NERDTreeToggle <cr>
+filetype plugin indent on
+" ================ Indentation ======================
+"
+  set autoindent
+  set smartindent
+  set smarttab
+  set shiftwidth=2
+  set softtabstop=2
+  set tabstop=2
+  set expandtab
+  "Auto ident pasted text
+  nnoremap p p=`]<C-o>
+  nnoremap P P=`]<C-o>
 
+"NerdTree Config
+	"Open nerdTree when no file is specified
+	  autocmd StdinReadPre * let s:std_in=1
+	"Map ctrl-n open NERDTREE
+	  map <C-n> :NERDTreeToggle<CR>
+          let NERDTreeMinimalUI = 1
+          let NERDTreeDirArrows = 1
 
+"Devicons
+         set encoding=utf8
+         set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 11
+         let g:airline_powerline_fonts=1
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:netrw_liststyle=3
-let g:netrw_chgwin=2
-let g:netrw_sort_sequence = '[\/]$,*'
-let g:netrw_banner = 0
-let g:netrw_winsize = -28
-let g:netrw_list_hide= '.*\.swp$'
