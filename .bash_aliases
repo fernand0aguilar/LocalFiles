@@ -97,3 +97,5 @@ alias mem="free -m | awk 'NR==2{printf \"MEM: %.2f%%\n\", \$3*100/\$2}'"
 alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END {print usage}' | awk '{printf(\"%.1f\n\", \$1)}'"
 alias run='python3 manage.py runserver'
 alias manage='python3 manage.py'
+
+alias brightnessLCD='xrandr --output DVI-I-2 --brightness'
