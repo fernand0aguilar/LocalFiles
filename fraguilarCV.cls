@@ -52,17 +52,17 @@
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
-\def\afterheaderspace{3pt}
-\def\beforesectionheaderspace{4.75pt}
+\def\afterheaderspace{-10pt}
+\def\beforesectionheaderspace{5pt}
 \def\sectionheadermargin{6pt}
-\def\aftersectionheaderspace{-4pt}
+\def\aftersectionheaderspace{-2pt}
 \def\sectionheaderhrlueheight{0.5pt}
-\def\aftersinglelinesubsectionheaderspace{-18.5pt}
+\def\aftersinglelinesubsectionheaderspace{-16pt}
 \def\afterdoublelinesubsectionheaderspace{-10pt}
 \def\aftermultilinesubsectionheaderspace{-6pt}
 \def\afteremptysubsectionheaderspace{3pt}
 \def\subsectionmargin{9pt}
-\def\aftersubsectionspace{4pt}
+\def\aftersubsectionspace{-2pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
