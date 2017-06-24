@@ -62,7 +62,7 @@
 \def\aftermultilinesubsectionheaderspace{-6pt}
 \def\afteremptysubsectionheaderspace{3pt}
 \def\subsectionmargin{9pt}
-\def\aftersubsectionspace{-2pt}
+\def\aftersubsectionspace{1pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
