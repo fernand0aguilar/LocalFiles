@@ -1,0 +1,74 @@
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\title{CV - English}
+\documentclass[]{fraguilarcv}
+
+% For brazilian accentuation
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% For mathematical symbols
+\usepackage{amsmath}
+
+% Header Personal Data
+\name {Fernando R. Aguilar}
+\address {Brasília, Brazil \linebreak 20, Male, Single}
+\contacts {(+55 61) 999.060.320 \linebreak fernando@aguilar.net.br \linebreak @fraguilar}
+
+\begin{document}
+
+% Print the header
+\makeheader
+
+% Print the content of employments
+\begin{cvsection}{Experience}
+	\begin{cvsubsection}{Internship}{Medialab/UnB}{(06/2017 - Currently)}
+		\begin{itemize}
+			\item \textbf{Description:} Interdisciplinary research laboratory devoted to projects at the convergence of technology, multimedia, sciences, art and design.
+			\item \textbf{Activities:} To change the ways of how humans and technologies interact. Monitored the exposition (\#16 ART: Artis intelligentia) and co-authored some projects exposed in Brazil and Portugal.
+			\item \textbf{Learnings:} The value of putting in motion the creative potential. Experiencing the personal development consciously being present on daily interactions and reflections.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Internship}{Brazilian Space Agency}{(01/2017 - 05/2017)}
+		\begin{itemize}
+			\item \textbf{Description:} Technological division in charge of attending the organization that coordinates the Brazilian aerospace policies.
+			\item \textbf{Activities:} Responsible for maintaining and troubleshooting the internal human resources system. Suggested improvements in the methodology design.
+			\item \textbf{Learnings:} Evolved my personal organization, solution-oriented skills and ability to work alone after given instructions.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Developer}{Energy Monitoring System/UnB}{(06/2016 - 12/2016)}
+		\begin{itemize}
+			\item \textbf{Description:} System that provides real time information on how much energy a facility of the university is consuming.
+			\item \textbf{Activities:} Developed new functionalities on the software. Solved recurrent configuration problems applying devops techniques.
+			\item \textbf{Learnings:} The value of mediation and collaboration in a group.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Internship}{UeBrasil - Mahvla Group}{(12/2015 - 06/2016)}
+		\begin{itemize}
+			\item \textbf{Description:} Web system to control and monitor the status of electronic ankles used by the prison system.
+			\item \textbf{Activities:} Evolved and refactored some important functionalities, improving the code metrics and reducing the cyclomatic complexity.
+			\item \textbf{Learnings:} The whole process of making a single change in a critical software.
+		\end{itemize}
+	\end{cvsubsection}
+
+	%Print the content of eductations%
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Gama, Brasilia, DF}{Universidade de Brasília (UnB)}{(06/2014 - Present)}
+			\begin{itemize}
+				\item Graduation in Software Engineering
+				\item \textbf{Coursework:} {Software Developing Processes \& Methodologies; Configuration Management; Requirements Engineering; GameDev \& Design; Operating Systems; Human-computer interactions; ...}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	%Print the content of technical Experience%
+	\begin{cvsection}{Technical Experience}
+		\begin{cvsubsection}{Personal Projects:}{}{}
+			\begin{itemize}
+				\item \textbf{MaisMorra Game (2017):} Game made in 'Epic Game Jam'. Winner of Regionals, proceeding to the finals in Rock in Rio 2017. Allowed in-depth knowledge on Team Management, Art, Programing, Digital Marketing \& Business.
+				\item \textbf{Portal Solidaridad (2016):} Platform that aims to provide financial freedom for charitable organizations and partners (solidaridad.com.br).
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+\end{cvsection}
+
+\end{document}
