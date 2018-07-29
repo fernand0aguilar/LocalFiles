@@ -118,3 +118,4 @@ function set-title() {
   PS1=${ORIG}${TITLE}
 }
 
+alias open='xdg-open'
