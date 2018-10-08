@@ -9,7 +9,7 @@ alias open='gnome-open'
 alias htop='sudo htop'
 alias commit='git commit -ps'
 alias q='exit'
-
+alias gitDate='LC_ALL=C GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"'
 
 #original aliases
 alias open='gnome-open'                                                                                                                     
