@@ -11,8 +11,9 @@ alias snano='sedit'
 #GENERAL
 alias q='exit'
 alias open='xdg-open'
-alias brightnessLCD='xrandr --output DVI-I-2 --brightness'
-
+alias brightnessLCD='xrandr --output LVDS-1 --brightness'
+alias please='sudo'
+alias shutdown="sudo shutdown -h now"
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
