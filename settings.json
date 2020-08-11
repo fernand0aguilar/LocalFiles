@@ -1,0 +1,57 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.visible": true,
+    "workbench.colorTheme": "Dracula",
+    "git.autofetch": true,
+    "editor.fontSize": 6,
+    "editor.formatOnSaveTimeout": 140,
+    "editor.fontLigatures": true,
+    "explorer.openEditors.visible": 0,
+    "editor.snippetSuggestions": "top",
+    "emmet.showAbbreviationSuggestions": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": false,
+    "window.zoomLevel": -1,
+    "terminal.integrated.fontSize": 15,
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "Anonymous Pro",
+    "editor.lineHeight": 0,
+    "markdown.preview.fontSize": 36,
+    "editor.minimap.enabled": false,
+    "eslint.enable": true,
+    "eslint.validate": [
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.suggestSelection": "first",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "liveshare.featureSet": "insiders",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.mouseWheelZoom": true,
+    "sync.autoDownload": true,
+    "sync.gist": "427262fed3ee9ac75bd8f30db1c3b7a4",
+    "sync.autoUpload": true,
+    "sync.quietSync": true
+}
